@@ -3,6 +3,7 @@ lib {
     mainmenu {
         special = directory
         special.value = {$globals.homePageUid}
+        excludeDoktypes = 137
         1 = TMENU
         1 {
             expAll = 1
