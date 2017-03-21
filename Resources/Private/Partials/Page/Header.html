@@ -1,0 +1,30 @@
+<f:if condition="{files}">
+    <f:then>
+        <header class="intro-header"
+                style="background-image: url({f:uri.image(src:'{files.0.originalFile.publicUrl}')})">
+            <f:render section="header" arguments="{_all}" />
+        </header>
+    </f:then>
+    <f:else>
+        <header class="intro-header"
+                style="background-image: url({f:uri.image(src:'EXT:clean_blog/Resources/Public/Images/home-bg.jpg')})">
+            <f:render section="header" arguments="{_all}" />
+        </header>
+    </f:else>
+</f:if>
+
+<f:section name="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>{data.title}</h1>
+                    <hr class="small">
+                    <f:if condition="{data.subtitle}">
+                        <span class="subheading">{data.subtitle}</span>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:section>

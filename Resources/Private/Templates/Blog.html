@@ -1,0 +1,11 @@
+<f:render partial="Navigation/MainNavigation" arguments="{_all}"/>
+<f:render partial="Page/Header" arguments="{_all}"/>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            {columnContent->f:format.html(parseFuncTSPath:'lib.parseFunc')}
+        </div>
+    </div>
+    <hr>
+</div>
+<f:render partial="Page/Footer" arguments="{_all}"/>

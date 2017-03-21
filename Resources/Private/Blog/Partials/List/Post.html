@@ -1,0 +1,8 @@
+{namespace blog=T3G\AgencyPack\Blog\ViewHelpers}
+<div class="post-preview" xmlns:f="http://www.w3.org/1999/html">
+    <f:link.page pageUid="{post.uid}">
+       <h2 itemprop="name" class="post-title">{post.title}</h2>
+        <f:render partial="Post/Meta" arguments="{_all}"/>
+    </f:link.page>
+</div>
+<hr>
